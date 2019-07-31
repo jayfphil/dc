@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>DBResults | Documentation</title>
+	<meta name="description" content="">
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="css/style.min.css">
+	<link rel="stylesheet" href="css/prism.css">
+	<link rel="stylesheet" href="css/custom.css">
+	<script src="js/modernizr.js"></script>
+	<link rel="icon" type="image/png" sizes="192x192"  href="image/favicon/android-icon-192x192.png">
+</head>
+<body class="">
+
+
+<div class="page js-page ">
+
+	<div class="one-page-sidebar">
+		<div class="one-page-sidebar-header">
+			<div class="one-page-logo">
+				<a href="#" target="_blank" class="logo-image ">
+					DBResults Document
+				</a>
+			</div>
+		</div>
+
+		<div class="one-page-nav-wrapper js-custom-scrollbar">
+			<ul class="one-page-nav js-one-page-nav js-menu-vertical">
+				<li>
+					<a href="#beginning">
+						ICCBS API to oWFM
+					</a>
+				</li>
+				<li>
+					<a href="#structure">
+						Cache - WO Details (Entities)
+					</a>
+				</li>
+				<!-- <li>
+					<a href="#html">
+						HTML Structure
+					</a>
+				</li>
+				<li>
+					<a href="#css">
+						CSS Structure
+					</a>
+				</li> 
+				<li>
+					<a href="#js">
+						Current EB Forms deployment
+					</a>
+				</li>
+				<li>
+					<a href="#force">
+						Manual DDQ Force Complete
+					</a>
+				</li>
+				<li>
+					<a href="#tod">
+						Turn-Over Document
+					</a>
+				</li> -->
+			</ul>
+		</div>
+
+		<footer class="one-page-sidebar-footer">
+			© <a href="mailto:phil.sanpedro@dbresults.com.hk">Phil San Pedro</a>, all rights reserved. 2018
+		</footer>
+
+	</div>
+
+	<div class="one-page-content">
+
+		<div id="content">
+			<div class="container-fluid container-spaced">
+				<div class="row">
+					<div class="col-md-12">
+
+						<div class="js-prepend-mobile-menu"></div>
+
+						<div class="category-info helper pt0" id="getting-started">
+							<br>
+							<div>
+									<h4 id="beginning">
+										<b>Get started on Testing Wakanda API A.K.A ICCBS </b>
+									</h4>
+									<hr>
+
+									<h3>Step 1</h3>
+									<p>Go to the Globe WFM dev environment and log as any user.</p>
+									<pre><code class="language-javascript">https://globetelecominc-dev.outsystemsenterprise.com/WFM_BackOffice/DashboardEntry.aspx</code></pre>
+									<br />
+									<h3>Step 2</h3>
+									<p>Copy the link below and replace it to your current browser <i>(Actually I didn't add any button or link from the menu screen to redirect you to the API testing screen, The QAs might surprise there is misplace button)</i>.</p>
+									<pre><code class="language-javascript">https://globetelecominc-dev.outsystemsenterprise.com/WFM_BackOffice/SaveAPItoEntities.aspx</code></pre>
+									
+									<br />
+									<h3>Step 3</h3>
+									<p>Now there are three input fields and three buttons on your current screen. Just fill up the <b>Work Order</b> field and click the <b>Get Details</b> to trigger the API call from ICCBS and redirect you to the results page.
+									<br><br> 
+									For <b>Check All Details</b> button : you will be redirect to the results page with all the cache <b>Work Order</b> data.
+									<br><br> 
+									For <b>Delete</b> button : you need to fill up the <b>Work Order</b> field to delete its <b>Work Order</b> detail cache.
+									<br><br>
+									Check the image below if you are currently in the same page.</p>
+									<img src="image/inputWO.PNG" alt="screen" class="scr_shot">
+
+									<h3>Step 4</h3>
+									<p>All done! you will be redirected to another page with the <b>Work Order</b> details and information just like the image below. Please check and compare this data from Wakanda/ICCBS entities. Happy Testing :)</p>
+									<img src="image/resultsWO.PNG" alt="screen" class="scr_shot">
+									<br>
+
+								</div>
+								<br>
+								<br>
+								<br>
+
+								<div>
+								<h4 id="structure">
+									<b style="display:none;">Offline/Cache Entities Structure</b>
+									<b>Fin</b>
+									<a class="fragment-identifier js-fragment-identifier fragment-identifier-scroll"
+									   href="#structure">
+										<i class="fa fa-link"></i>
+									</a>
+
+								</h4>
+								<hr>
+								<p class="category-content">
+								<ul class="nav structure_list" style="display:none;">
+									<li>
+										<i class="fa fa-gear"></i>
+										WFM_DB
+
+										<ul class="nav structure_step">
+											<li>
+												<i class="fa fa-folder"></i>
+												APIWakanda_APIResponse
+												<ul class="nav structure_step">
+													<li>
+														<i class="fa fa-file"></i>
+														ReferenceTransId
+													</li>
+													<li>
+														<i class="fa fa-file"></i>
+														ResponseCode
+													</li>
+													<li>
+														<i class="fa fa-file"></i>
+														ResponseDescription
+													</li>
+													<li>
+														<i class="fa fa-file"></i>
+														OrderId
+													</li>
+													<li>
+														<i class="fa fa-file"></i>
+														ReferenceNumber
+													</li>
+													<li>
+														<i class="fa fa-file"></i>
+														ChannelId
+													</li>
+													<li>
+														<i class="fa fa-file"></i>
+														ActionUserId
+													</li>
+												</ul>
+											</li>
+											<li>
+												<i class="fa fa-folder"></i>
+												APIWakanda_ActivityDetails
+												<ul class="nav structure_step">
+													<li>
+														<i class="fa fa-file"></i>
+														ResponseListId
+													</li>
+													<li>
+														<i class="fa fa-file"></i>
+														ActivityNo
+													</li>
+													<li>
+														<i class="fa fa-file"></i>
+														ActivityTypeID
+													</li>
+													<li>
+														<i class="fa fa-file"></i>
+														ActivityDesc
+													</li>
+													<li>
+														<i class="fa fa-file"></i>
+														ActivityStatus
+													</li>
+													<li>
+														<i class="fa fa-file"></i>
+														QName
+													</li>
+													<li>
+														<i class="fa fa-file"></i>
+														ApptBookId
+													</li>
+													<li>
+														<i class="fa fa-file"></i>
+														ApptDateTime
+													</li>
+													<li>
+														<i class="fa fa-file"></i>
+														JobReqdDate
+													</li>
+													<li>
+														<i class="fa fa-file"></i>
+														StaffId
+													</li>
+													<li>
+														<i class="fa fa-file"></i>
+														ActivityNote
+													</li>
+													<li>
+														<i class="fa fa-file"></i>
+														OrderTaker
+													</li>
+													<li>
+														<i class="fa fa-file"></i>
+														ApptStatus
+													</li>
+												</ul>
+											</li>
+											<li>
+												<i class="fa fa-folder"></i>
+												APIWakanda_BBDetail
+												<ul class="nav structure_step">
+													<li>
+														<i class="fa fa-file"></i>
+														ResponseListId
+													</li>
+													<li>
+														<i class="fa fa-file"></i>
+														LineStatus
+													</li>
+													<li>
+														<i class="fa fa-file"></i>
+														NodeID
+													</li>
+													<li>
+														<i class="fa fa-file"></i>
+														Port
+													</li>
+													<li>
+														<i class="fa fa-file"></i>
+														RackRing
+													</li>
+													<li>
+														<i class="fa fa-file"></i>
+														ADSL
+													</li>
+													<li>
+														<i class="fa fa-file"></i>
+														RUshelf
+													</li>
+													<li>
+														<i class="fa fa-file"></i>
+														POTS
+													</li>
+													<li>
+														<i class="fa fa-file"></i>
+														LineTerm
+													</li>
+													<li>
+														<i class="fa fa-file"></i>
+														ConnDPExchID
+													</li>
+													<li>
+														<i class="fa fa-file"></i>
+														ConnDPDStrip
+													</li>
+													<li>
+														<i class="fa fa-file"></i>
+														ConnDPID
+													</li>
+													<li>
+														<i class="fa fa-file"></i>
+														ConnDPDPair
+													</li>
+												</ul>
+											</li>
+											<li>
+												<i class="fa fa-folder"></i>
+												APIWakanda_DPtoSubDetail
+												<ul class="nav structure_step">
+													<li>
+														<i class="fa fa-file"></i>
+														ResponseListId
+													</li>
+													<li>
+														<i class="fa fa-file"></i>
+														LineStatus
+													</li>
+													<li>
+														<i class="fa fa-file"></i>
+														DPExchId
+													</li>
+													<li>
+														<i class="fa fa-file"></i>
+														DPID
+													</li>
+													<li>
+														<i class="fa fa-file"></i>
+														DPDStrip
+													</li>
+													<li>
+														<i class="fa fa-file"></i>
+														DPDPair
+													</li>
+												</ul>
+											</li>
+											<li>
+												<i class="fa fa-folder"></i>
+												APIWakanda_DSLUserIdDetail
+												<ul class="nav structure_step">
+													<li>
+														<i class="fa fa-file"></i>
+														ResponseListId
+													</li>
+													<li>
+														<i class="fa fa-file"></i>
+														ActionID
+													</li>
+													<li>
+														<i class="fa fa-file"></i>
+														UserId
+													</li>
+												</ul>
+											</li>
+											<li>
+												<i class="fa fa-folder"></i>
+												APIWakanda_FacilityAssignment
+												<ul class="nav structure_step">
+													<li>
+														<i class="fa fa-file"></i>
+														ResponseListId
+													</li>
+													<li>
+														<i class="fa fa-file"></i>
+														ServiceNo
+													</li>
+													<li>
+														<i class="fa fa-file"></i>
+														LineNo
+													</li>
+													<li>
+														<i class="fa fa-file"></i>
+														CktType
+													</li>
+													<li>
+														<i class="fa fa-file"></i>
+														AddressId
+													</li>
+													<li>
+														<i class="fa fa-file"></i>
+														LenId
+													</li>
+													<li>
+														<i class="fa fa-file"></i>
+														SvcType
+													</li>
+												</ul>
+											</li>
+											<li>
+												<i class="fa fa-folder"></i>
+												APIWakanda_FaultDetail
+												<ul class="nav structure_step">
+													<li>
+														<i class="fa fa-file"></i>
+														ResponseListId
+													</li>
+													<li>
+														<i class="fa fa-file"></i>
+														CreationDateTime
+													</li>
+													<li>
+														<i class="fa fa-file"></i>
+														EquipTypeID
+													</li>
+													<li>
+														<i class="fa fa-file"></i>
+														ProblemReportID
+													</li>
+													<li>
+														<i class="fa fa-file"></i>
+														SymptomTypeId
+													</li>
+													<li>
+														<i class="fa fa-file"></i>
+														UserId
+													</li>
+													<li>
+														<i class="fa fa-file"></i>
+														FaultNotes
+													</li>
+												</ul>
+											</li>
+											<li>
+												<i class="fa fa-folder"></i>
+												APIWakanda_FibreRoutingDetail
+												<ul class="nav structure_step">
+													<li><i class="fa fa-file"></i>errorMessage</li>
+													<li><i class="fa fa-file"></i>description</li>
+													<li><i class="fa fa-file"></i>id</li>
+													<li><i class="fa fa-file"></i>dM1CardSlot</li>
+													<li><i class="fa fa-file"></i>dM1GponPort</li>
+													<li><i class="fa fa-file"></i>dM1NapId</li>
+													<li><i class="fa fa-file"></i>dM1NapPort</li>
+													<li><i class="fa fa-file"></i>dM1NodeId</li>
+													<li><i class="fa fa-file"></i>dM1RackId</li>
+													<li><i class="fa fa-file"></i>dM1ShelfId</li>
+													<li><i class="fa fa-file"></i>dM1SiteName</li>
+													<li><i class="fa fa-file"></i>dM2CardSlot</li>
+													<li><i class="fa fa-file"></i>dM2DpuId</li>
+													<li><i class="fa fa-file"></i>dM2DpuPort</li>
+													<li><i class="fa fa-file"></i>dM2GponPort</li>
+													<li><i class="fa fa-file"></i>dM2HouseNodeId</li>
+													<li><i class="fa fa-file"></i>dM2NapId</li>
+													<li><i class="fa fa-file"></i>dM2NapPort</li>
+													<li><i class="fa fa-file"></i>dM2NodeId</li>
+													<li><i class="fa fa-file"></i>dM2RackId</li>
+													<li><i class="fa fa-file"></i>dM2ShelfId</li>
+													<li><i class="fa fa-file"></i>dM2SiteName</li>
+													<li><i class="fa fa-file"></i>dM3CardSlot</li>
+													<li><i class="fa fa-file"></i>dM3HousedNodeId</li>
+													<li><i class="fa fa-file"></i>dM3NodeId</li>
+													<li><i class="fa fa-file"></i>dM3RackId</li>
+													<li><i class="fa fa-file"></i>dM3ShelfId</li>
+													<li><i class="fa fa-file"></i>dM3SiteName</li>
+													<li><i class="fa fa-file"></i>dM3VdslPort</li>
+													<li><i class="fa fa-file"></i>orderNo</li>
+													<li><i class="fa fa-file"></i>referenceNo</li>
+													<li><i class="fa fa-file"></i>reservationId</li>
+													<li><i class="fa fa-file"></i>subNo</li>
+													<li><i class="fa fa-file"></i>serviceNo</li>
+												</ul>
+											</li>
+											<!-- <li>
+												<i class="fa fa-folder"></i>
+												APIWakanda_FibreRoutingDetailList 
+											</li> -->
+											<li>
+												<i class="fa fa-folder"></i>
+												APIWakanda_ListIdItem 
+												<ul class="nav structure_step">
+													<li><i class="fa fa-file"></i>errorMessage</li>
+													<li><i class="fa fa-file"></i>description</li>
+													<li><i class="fa fa-file"></i>id</li>
+												</ul>
+											</li>
+											<li>
+												<i class="fa fa-folder"></i>
+												APIWakanda_NtgBsidReadingModelListItem 
+												<ul class="nav structure_step">
+													<li><i class="fa fa-file"></i>ntgBtsId</li>
+													<li><i class="fa fa-file"></i>sectorName</li>
+													<li><i class="fa fa-file"></i>custAcNo</li>
+													<li><i class="fa fa-file"></i>svcNo</li>
+													<li><i class="fa fa-file"></i>iccbsBtsId</li>
+													<li><i class="fa fa-file"></i>recordedBtsId</li>
+													<li><i class="fa fa-file"></i>processDatetime</li>
+													<li><i class="fa fa-file"></i>result</li>
+												</ul>
+											</li>
+											<li>
+												<i class="fa fa-folder"></i>
+												APIWakanda_OrderLine 
+												<ul class="nav structure_step">
+													<li><i class="fa fa-file"></i>productId</li>
+													<li><i class="fa fa-file"></i>prodShortDesc</li>
+													<li><i class="fa fa-file"></i>productQty</li>
+												</ul>
+											</li>
+											<li>
+												<i class="fa fa-folder"></i>
+												APIWakanda_OrderNotes 
+												<ul class="nav structure_step">
+													<li><i class="fa fa-file"></i>compNum</li>
+													<li><i class="fa fa-file"></i>noteCreateDateTime</li>
+													<li><i class="fa fa-file"></i>noteLevel</li>
+													<li><i class="fa fa-file"></i>noteText</li>
+													<li><i class="fa fa-file"></i>noteType</li>
+													<li><i class="fa fa-file"></i>siteNum</li>
+												</ul>
+											</li>
+											<li>
+												<i class="fa fa-folder"></i>
+												APIWakanda_PrimPairDetail
+												<ul class="nav structure_step">
+													<li><i class="fa fa-file"></i>lineStatus</li>
+													<li><i class="fa fa-file"></i>mDFExchID</li>
+													<li><i class="fa fa-file"></i>cABExch</li>
+													<li><i class="fa fa-file"></i>mdfId</li>
+													<li><i class="fa fa-file"></i>cabId</li>
+													<li><i class="fa fa-file"></i>mdfDStrip</li>
+													<li><i class="fa fa-file"></i>cabEStrip</li>
+													<li><i class="fa fa-file"></i>mdfDPair</li>
+													<li><i class="fa fa-file"></i>cabEPair</li>
+												</ul> 
+											</li>
+											<li>
+												<i class="fa fa-folder"></i>
+												APIWakanda_SecPairDetail
+												<ul class="nav structure_step">
+													<li><i class="fa fa-file"></i>lineStatus</li>
+													<li><i class="fa fa-file"></i>cabExchID</li>
+													<li><i class="fa fa-file"></i>dpExchID</li>
+													<li><i class="fa fa-file"></i>cabID</li>
+													<li><i class="fa fa-file"></i>dpID</li>
+													<li><i class="fa fa-file"></i>cabDStrip</li>
+													<li><i class="fa fa-file"></i>dpEStrip</li>
+													<li><i class="fa fa-file"></i>cabDPair</li>
+													<li><i class="fa fa-file"></i>dpEPair</li>
+												</ul> 
+											</li>
+											<li>
+												<i class="fa fa-folder"></i>
+												APIWakanda_SubscriberDetail
+												<ul class="nav structure_step">
+													<li><i class="fa fa-file"></i>troubleTicketNo</li>
+													<li><i class="fa fa-file"></i>resvID</li>
+													<li><i class="fa fa-file"></i>orderNo</li>
+													<li><i class="fa fa-file"></i>refNo</li>
+													<li><i class="fa fa-file"></i>link_ord_no</li>
+													<li><i class="fa fa-file"></i>link_ref_no</li>
+													<li><i class="fa fa-file"></i>accountNo</li>
+													<li><i class="fa fa-file"></i>subFName</li>
+													<li><i class="fa fa-file"></i>subMName</li>
+													<li><i class="fa fa-file"></i>subLName</li>
+													<li><i class="fa fa-file"></i>accountCat</li>
+													<li><i class="fa fa-file"></i>accountCatDesc</li>
+													<li><i class="fa fa-file"></i>customerClass</li>
+													<li><i class="fa fa-file"></i>customerClassDesc</li>
+													<li><i class="fa fa-file"></i>instAddress</li>
+													<li><i class="fa fa-file"></i>billAddress</li>
+													<li><i class="fa fa-file"></i>contactName</li>
+													<li><i class="fa fa-file"></i>contactNo</li>
+													<li><i class="fa fa-file"></i>jobType</li>
+													<li><i class="fa fa-file"></i>netSvcId</li>
+													<li><i class="fa fa-file"></i>serviceType</li>
+													<li><i class="fa fa-file"></i>salesmanId</li>
+													<li><i class="fa fa-file"></i>salesmanName</li>
+													<li><i class="fa fa-file"></i>inst_seq_no</li>
+												</ul> 
+											</li>
+											<li>
+												<i class="fa fa-folder"></i>
+												APIWakanda_WirelessNodeDetails
+												<ul class="nav structure_step">
+													<li><i class="fa fa-file"></i>lineStatus</li>
+													<li><i class="fa fa-file"></i>serviceType</li>
+													<li><i class="fa fa-file"></i>nodeId</li>
+													<li><i class="fa fa-file"></i>slotNo</li>
+												</ul> 
+											</li>
+										</ul>
+									</li>
+
+								</ul>
+							</div>
+							
+						</div>
+
+					</div>
+				</div>
+			</div>	
+		</div>	
+	</div>	
+</div>						
+						<script src="js/prism.js"></script>
+						<script src="js/all.js"></script>
+						<script src="js/custom.js"></script>
+</body>
+</html>
